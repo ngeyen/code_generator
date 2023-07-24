@@ -4,7 +4,11 @@ FastAPI is a modern web framework for building APIs with Python. To deploy this 
 
 ## 1. Local Development and Testing
 
-1 Install dependencies: Make sure you have installed all the required dependencies by creating a virtual environment and installing the necessary packages. You can use `pip install -r requirements.txt` for this.
+1 Install dependencies: Make sure you have installed all the required dependencies by creating a virtual environment and installing the necessary packages. You can use the `pip` for this.
+
+```bash
+pip install -r requirements.txt
+```
 
 Run the application: In your terminal, navigate to the root directory of your FastAPI application and use `uvicorn` to run the application.
 
