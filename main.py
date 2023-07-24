@@ -16,13 +16,12 @@ app = FastAPI(
     contact=contact,
     version=version,
     license_info=license_info,
-    openapi_url='/',
 )
 
 
 
 @app.get("/generate", description="To generate a unique code, you can make a request to the `/generate` endpoint without providing any additional parameters. The default code length will be used (8 characters)")
-async def code_generator():
+async def codes_generator_api_view():
     code = code_generator()
     context ={}
     context['code'] = code
@@ -32,7 +31,7 @@ async def code_generator():
 
 
 @app.get("/chars/{length}", description="Takes `length` as parameter and generates codes with only characters with that length")
-async def character_generator(length: int):
+async def characters_generator_api_view(length: int):
     code = string_generator(length)
     context ={}
     context['code'] = code
@@ -42,7 +41,7 @@ async def character_generator(length: int):
 
 
 @app.get("/numbers/{length}", description="Takes `length` as parameter and generates codes with only integers with that length")
-async def numbers_only(length: int):
+async def numbers_generator_api_view(length: int):
     code = number_generator(length)
     context ={}
     context['code'] = code
