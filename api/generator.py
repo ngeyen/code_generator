@@ -30,8 +30,8 @@ def number_generator(length):
 # from database import schemas
 
 # def register_users(db):
-#     for index,item in enumerate(existing_users):
-#         code = schemas.FamilyCodeBase( id=index,
-#             family_code=item, is_registered=True
+#     for item in existing_users:
+#         code = schemas.FamilyCodeBase( 
+#             family_code=item, is_registered=True, 
 #         )
-#         crud.create_family_code(db, family_code=code)
+#         crud.create_family_code(db, serializer=code)
